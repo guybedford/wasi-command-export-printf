@@ -1,0 +1,2 @@
+wasm-tools component new --wit component_runtime_hello.wit component_runtime.core.wasm --adapt wasi_snapshot_preview1=wasi_snapshot_preview1.command.wasm -o component_runtime.wasm
+npx js-component-tools transpile -q --name component-runtime component_runtime.wasm -o dist --map wasi-exit=../wasi/exit.js --map wasi-logging=../wasi/logging.js --map wasi-logging2=../wasi/logging.js --map wasi-default-clocks=../wasi/default-clocks.js --map wasi-poll=../wasi/poll.js --map wasi-filesystem=../wasi/filesystem.js --map wasi-clocks=../wasi/clocks.js --map wasi-random=../wasi/random.js
